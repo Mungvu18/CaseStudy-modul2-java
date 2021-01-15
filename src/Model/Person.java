@@ -1,6 +1,8 @@
+package Model;
+
 import java.time.LocalDate;
 
-public class Person {
+public abstract class Person implements Salary {
     private String name;
     private LocalDate birthday;
 
@@ -9,11 +11,16 @@ public class Person {
         this.birthday = birthday;
     }
 
+    public String getName() {
+        return name;
+    }
+
     @Override
     public String toString() {
-        return "Person{" +
+        return "Model.Person{" +
                 "name='" + name + '\'' +
                 ", birthday=" + birthday +
                 '}';
     }
+
 }

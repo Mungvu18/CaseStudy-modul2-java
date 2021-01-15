@@ -1,6 +1,7 @@
+package Model;
 import java.time.LocalDate;
 
-public class Pharmacist extends Person implements Salary{
+public class Pharmacist extends Person implements Salary {
     private String scCode;
     private String team;
     private String areWork;
@@ -12,9 +13,17 @@ public class Pharmacist extends Person implements Salary{
         this.areWork = areWork;
     }
 
+    public String getScCode() {
+        return scCode;
+    }
+
+    public String getAreWork() {
+        return areWork;
+    }
+
     @Override
     public String toString() {
-        return "Pharmacist{" +
+        return "Model.Pharmacist{" +
                 "scCode='" + scCode + '\'' +
                 ", team='" + team + '\'' +
                 ", areWork='" + areWork + '\'' +

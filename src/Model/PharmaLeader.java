@@ -1,10 +1,13 @@
-import java.time.LocalDate;
+package Model;
 
-public class Leader extends Person implements Salary{
+import java.time.LocalDate;
+import java.util.List;
+
+public class PharmaLeader extends Person implements Salary {
     private String positions;
     private String degree;
 
-    public Leader(String name, LocalDate birthday, String positions, String degree) {
+    public PharmaLeader(String name, LocalDate birthday, String positions, String degree) {
         super(name, birthday);
         this.positions = positions;
         this.degree = degree;
@@ -12,7 +15,7 @@ public class Leader extends Person implements Salary{
 
     @Override
     public String toString() {
-        return "Leader{" +
+        return "Model.PharmaLeader{" +
                 "positions='" + positions + '\'' +
                 ", degree='" + degree + '\'' +
                 "} " + super.toString();
@@ -29,4 +32,5 @@ public class Leader extends Person implements Salary{
             throw new IllegalArgumentException();
         }
     }
+
 }
