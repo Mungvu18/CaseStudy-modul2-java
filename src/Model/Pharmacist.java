@@ -26,13 +26,6 @@ public class Pharmacist extends Person implements Salary {
         this.areaWork = areaWork;
     }
 
-    public String getScCode() {
-        return scCode;
-    }
-
-    public String getAreaWork() {
-        return areaWork;
-    }
 
     @Override
     public double getSalary() {

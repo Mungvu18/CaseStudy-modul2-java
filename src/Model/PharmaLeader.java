@@ -3,11 +3,11 @@ package Model;
 import java.time.LocalDate;
 
 public class PharmaLeader extends Person implements Salary {
+    public static final String UNIVERSITY = "Đại học";
+    public static final String COLLEGES = "Cao đẳng";
     private String positions;
     private String degree;
 
-    public PharmaLeader() {
-    }
 
     public PharmaLeader(String name, LocalDate birthday) {
         super(name, birthday);
@@ -29,10 +29,10 @@ public class PharmaLeader extends Person implements Salary {
 
     @Override
     public double getSalary() {
-        if (degree.equalsIgnoreCase("Đại học")) {
+        if (degree.equalsIgnoreCase(UNIVERSITY)) {
             return 10000000;
         }
-        if (degree.equalsIgnoreCase("Cao đẳng")) {
+        if (degree.equalsIgnoreCase(COLLEGES)) {
             return 7000000;
         } else return 0;
     }

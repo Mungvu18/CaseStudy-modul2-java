@@ -7,11 +7,11 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Map;
+
 
 public class ManagerPharma {
-    public static final String ĐÃ_ĐỔI_NGÀY_SINH_THÀNH_CÔNG = "Đã đổi ngày sinh thành công";
-    public static final String TÊN_KHÔNG_TỒN_TẠI = "Tên không tồn tại";
+    public static final String CHANGE_NAME_OF_OBJECT_OK = "Đã đổi ngày sinh thành công";
+    public static final String OBJECT_NOT_EXITS = "Đối tượng không tồn tại";
     List<Person> pharmaList = new ArrayList<>();
     static final String FILE_NAME = "pharmaList.obj";
     private static ManagerPharma instance = null;
@@ -30,14 +30,15 @@ public class ManagerPharma {
     public void remove(int index){
         pharmaList.remove(index);
     }
-    public String editBirthday(String name, LocalDate birthday){
+    public void editBirthday(String name, LocalDate birthday){
         for (Person person: pharmaList) {
             if(person.getName().equalsIgnoreCase(name)){
                 person.setBirthday(birthday);
-                return ĐÃ_ĐỔI_NGÀY_SINH_THÀNH_CÔNG;
+                System.out.println(CHANGE_NAME_OF_OBJECT_OK);
+                return;
             }
         }
-        return TÊN_KHÔNG_TỒN_TẠI;
+        System.out.println(OBJECT_NOT_EXITS);
     }
 
     public  void showAll(){
