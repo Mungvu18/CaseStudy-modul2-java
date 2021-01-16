@@ -21,11 +21,9 @@ public class ManagerPharma {
             System.out.println(person);
         }
     }
-    public void sortByName(){
-        Collections.sort(pharmaList,((o1, o2) -> {
-           return o1.getName().compareTo(o2.getName());
-        }));
-        showAll();
+    public List<Person> sortByName(){
+       Collections.sort(pharmaList);
+        return pharmaList;
     }
     public void sortBySalary(){
         Collections.sort(pharmaList,((o1,o2) -> {

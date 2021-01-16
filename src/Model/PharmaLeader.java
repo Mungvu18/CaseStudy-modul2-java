@@ -7,6 +7,13 @@ public class PharmaLeader extends Person implements Salary {
     private String positions;
     private String degree;
 
+    public PharmaLeader() {
+    }
+
+    public PharmaLeader(String degree) {
+        this.degree = degree;
+    }
+
     public PharmaLeader(String name, LocalDate birthday, String positions, String degree) {
         super(name, birthday);
         this.positions = positions;
@@ -27,10 +34,9 @@ public class PharmaLeader extends Person implements Salary {
             return 10000000;
         }
         if(degree.equalsIgnoreCase("Cao đẳng")){
-            return 70000000;
-        } else {
-            throw new IllegalArgumentException();
+            return 7000000;
         }
+       else return 0;
     }
 
 }

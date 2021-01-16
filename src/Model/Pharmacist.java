@@ -6,10 +6,15 @@ public class Pharmacist extends Person implements Salary {
     private String team;
     private String areWork;
 
+
     public Pharmacist(String name, LocalDate birthday, String scCode, String team, String areWork) {
         super(name, birthday);
         this.scCode = scCode;
         this.team = team;
+        this.areWork = areWork;
+    }
+
+    public Pharmacist(String areWork) {
         this.areWork = areWork;
     }
 
