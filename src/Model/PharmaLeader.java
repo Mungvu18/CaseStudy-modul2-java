@@ -1,7 +1,6 @@
 package Model;
 
 import java.time.LocalDate;
-import java.util.List;
 
 public class PharmaLeader extends Person implements Salary {
     private String positions;
@@ -10,15 +9,23 @@ public class PharmaLeader extends Person implements Salary {
     public PharmaLeader() {
     }
 
+    public PharmaLeader(String name, LocalDate birthday) {
+        super(name, birthday);
+    }
+
+    public PharmaLeader withPositions(String positions) {
+        this.positions = positions;
+        return this;
+    }
+    public PharmaLeader withDegree(String degree){
+        this.degree = degree;
+        return this;
+    }
+
     public PharmaLeader(String degree) {
         this.degree = degree;
     }
 
-    public PharmaLeader(String name, LocalDate birthday, String positions, String degree) {
-        super(name, birthday);
-        this.positions = positions;
-        this.degree = degree;
-    }
 
     @Override
     public String toString() {
@@ -30,13 +37,12 @@ public class PharmaLeader extends Person implements Salary {
 
     @Override
     public double getSalary() {
-        if(degree.equalsIgnoreCase("Đại học")){
+        if (degree.equalsIgnoreCase("Đại học")) {
             return 10000000;
         }
-        if(degree.equalsIgnoreCase("Cao đẳng")){
+        if (degree.equalsIgnoreCase("Cao đẳng")) {
             return 7000000;
-        }
-       else return 0;
+        } else return 0;
     }
 
 }

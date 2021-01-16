@@ -1,6 +1,7 @@
 package Model;
 
 import java.io.Serializable;
+import java.sql.PreparedStatement;
 import java.time.LocalDate;
 
 public abstract class Person implements Salary, Comparable<Person>,Serializable {

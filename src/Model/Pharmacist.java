@@ -4,26 +4,34 @@ import java.time.LocalDate;
 public class Pharmacist extends Person implements Salary {
     private String scCode;
     private String team;
-    private String areWork;
+    private String areaWork;
 
-
-    public Pharmacist(String name, LocalDate birthday, String scCode, String team, String areWork) {
+    public Pharmacist(String name, LocalDate birthday) {
         super(name, birthday);
+    }
+    public Person withScCode(String scCode){
         this.scCode = scCode;
+        return this;
+    }
+    public Person withTeam(String team){
         this.team = team;
-        this.areWork = areWork;
+        return this;
+    }
+    public Person withAreaWork(String areaWork){
+        this.areaWork = areaWork;
+        return this;
     }
 
-    public Pharmacist(String areWork) {
-        this.areWork = areWork;
+    public Pharmacist(String areaWork) {
+        this.areaWork = areaWork;
     }
 
     public String getScCode() {
         return scCode;
     }
 
-    public String getAreWork() {
-        return areWork;
+    public String getAreaWork() {
+        return areaWork;
     }
 
     @Override
@@ -31,13 +39,13 @@ public class Pharmacist extends Person implements Salary {
         return "Model.Pharmacist{" +
                 "scCode='" + scCode + '\'' +
                 ", team='" + team + '\'' +
-                ", areWork='" + areWork + '\'' +
+                ", areWork='" + areaWork + '\'' +
                 "} " + super.toString();
     }
 
     @Override
     public double getSalary() {
-        if(areWork.equalsIgnoreCase("Hà Nội")||areWork.equalsIgnoreCase("TPHCM")){
+        if(areaWork.equalsIgnoreCase("Hà Nội")|| areaWork.equalsIgnoreCase("TPHCM")){
             return 6000000;
         } else return 5000000;
     }

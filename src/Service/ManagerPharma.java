@@ -6,10 +6,21 @@ import Storage.WriteAndReadFile;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 
 public class ManagerPharma {
     List<Person> pharmaList = new ArrayList<>();
     static final String FILE_NAME = "pharmaList.obj";
+    private static ManagerPharma instance = null;
+    public static ManagerPharma getInstance(){
+        if(instance == null) synchronized (ManagerPharma.class){
+            instance = new ManagerPharma();
+        }
+        return instance;
+    }
+    private ManagerPharma(){
+    }
+
     public void addNew(Person person){
         pharmaList.add(person);
     }
