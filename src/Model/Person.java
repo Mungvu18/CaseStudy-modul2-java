@@ -11,6 +11,10 @@ public abstract class Person implements Salary, Comparable<Person>,Serializable 
     public Person() {
     }
 
+    public void setBirthday(LocalDate birthday) {
+        this.birthday = birthday;
+    }
+
     public Person(String name) {
         this.name = name;
     }

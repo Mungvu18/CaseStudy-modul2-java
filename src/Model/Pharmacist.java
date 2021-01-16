@@ -35,18 +35,19 @@ public class Pharmacist extends Person implements Salary {
     }
 
     @Override
-    public String toString() {
-        return "Model.Pharmacist{" +
-                "scCode='" + scCode + '\'' +
-                ", team='" + team + '\'' +
-                ", areWork='" + areaWork + '\'' +
-                "} " + super.toString();
-    }
-
-    @Override
     public double getSalary() {
         if(areaWork.equalsIgnoreCase("Hà Nội")|| areaWork.equalsIgnoreCase("TPHCM")){
             return 6000000;
         } else return 5000000;
     }
+    @Override
+    public String toString() {
+        return "Model.Pharmacist{" +
+                "scCode='" + scCode + '\'' +
+                ", team='" + team + '\'' +
+                ", areWork='" + areaWork + '\'' + ", salary=" + getSalary() +
+                "} " + super.toString();
+    }
+
+
 }

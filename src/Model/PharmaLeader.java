@@ -28,14 +28,6 @@ public class PharmaLeader extends Person implements Salary {
 
 
     @Override
-    public String toString() {
-        return "Model.PharmaLeader{" +
-                "positions='" + positions + '\'' +
-                ", degree='" + degree + '\'' +
-                "} " + super.toString();
-    }
-
-    @Override
     public double getSalary() {
         if (degree.equalsIgnoreCase("Đại học")) {
             return 10000000;
@@ -44,5 +36,11 @@ public class PharmaLeader extends Person implements Salary {
             return 7000000;
         } else return 0;
     }
-
+    @Override
+    public String toString() {
+        return "Model.PharmaLeader{" +
+                "positions='" + positions + '\'' +
+                ", degree='" + degree + '\'' + ", salary=" + getSalary() +
+                "} " + super.toString();
+    }
 }
