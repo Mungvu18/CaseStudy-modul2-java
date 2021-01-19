@@ -1,11 +1,11 @@
-package View;
+package view;
 
-import Model.Person;
-import Service.ManagerPharma;
+import model.Person;
+import service.ManagerPharma;
 
 import java.time.LocalDate;
 import java.util.Scanner;
-import static View.Constant_Variable.Constant.*;
+import static view.constant_Variable.Constant.*;
 
 public class TestMain {
     static ManagerPharma managerPharma = ManagerPharma.getInstance();
@@ -40,19 +40,20 @@ public class TestMain {
                     managerPharma.editBirthday(name,birthday);
                     break;
                 case 5:
-                    managerPharma.sortBySalary();
+                    managerPharma.sortBySalaryAndName();
                     break;
                 case 6:
+                    managerPharma.showTopThreeMaxBySalary();
+                case 7:
                     managerPharma.writeFile();
                     break;
-                case 7:
+                case 8:
                     managerPharma.readFile();
                     break;
                 case 0:
                     System.out.println(EXIT);
                     break;
             }
-
         } while (choice != 0);
     }
 }

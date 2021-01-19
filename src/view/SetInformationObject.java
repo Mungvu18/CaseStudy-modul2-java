@@ -1,11 +1,13 @@
-package View;
+package view;
 
-import Model.Person;
-import Model.PharmaLeader;
-import Model.Pharmacist;
+import model.Person;
+import model.PersonType;
+import model.PharmaLeader;
+import model.*;
+import service.PersonFactory;
 
 import java.time.LocalDate;
-import static View.Constant_Variable.Constant.*;
+import static view.constant_Variable.Constant.*;
 
 public class SetInformationObject {
 
@@ -39,7 +41,7 @@ public class SetInformationObject {
                 String team = sc.nextLine();
                 System.out.println(ENTER_AREA_WORK);
                 String areaWork = sc1.nextLine();
-                Pharmacist pharmacist = new Pharmacist(name, birthday);
+                Pharmacist pharmacist = (Pharmacist) PersonFactory.getPerson(PersonType.Pharmacist,name,birthday);
                 pharmacist.withAreaWork(areaWork);
                 pharmacist.withScCode(scCode);
                 pharmacist.withTeam(team);
@@ -51,7 +53,7 @@ public class SetInformationObject {
                 String positions = sc.nextLine();
                 System.out.println(ENTER_MAJOR);
                 String degree = sc1.nextLine();
-                PharmaLeader pharmaLeader = new PharmaLeader(name, birthday);
+                PharmaLeader pharmaLeader = (PharmaLeader) PersonFactory.getPerson(PersonType.PharmaLeader,name,birthday);
                 pharmaLeader.withDegree(degree);
                 pharmaLeader.withPositions(positions);
                 person = pharmaLeader;
@@ -65,6 +67,7 @@ public class SetInformationObject {
         System.out.println(DELETE_OBJECT_BY_INDEX);
         System.out.println(EDIT_BIRTH_DAY);
         System.out.println(SORT_BY_NAME_AND_SALARY);
+        System.out.println(SHOW_TOP_THREE_BY_SALARY);
         System.out.println(WRITE_FILE);
         System.out.println(READ_FILE);
         System.out.println(EXIT_PROGRAM);

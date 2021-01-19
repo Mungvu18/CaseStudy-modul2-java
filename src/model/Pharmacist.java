@@ -1,7 +1,8 @@
-package Model;
+package model;
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Pharmacist extends Person implements Salary {
+public class Pharmacist extends Person implements Salary, Serializable {
     private String scCode;
     private String team;
     private String areaWork;

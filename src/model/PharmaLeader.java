@@ -1,10 +1,11 @@
-package Model;
+package model;
 
+import java.io.Serializable;
 import java.time.LocalDate;
+import static view.constant_Variable.Constant.*;
 
-public class PharmaLeader extends Person implements Salary {
-    public static final String UNIVERSITY = "Đại học";
-    public static final String COLLEGES = "Cao đẳng";
+public class PharmaLeader extends Person implements Salary, Serializable {
+
     private String positions;
     private String degree;
 

@@ -1,10 +1,15 @@
-package View.Constant_Variable;
+package view.constant_Variable;
 
-import Service.ManagerPharma;
 
 import java.util.Scanner;
 
 public class Constant {
+    public static final String SHOW_TOP_THREE_BY_SALARY = "6.Hiển thị top 3 người có lương cao nhất";
+    public static final String FILE_NAME = "pharmaList.obj";
+    public static final String CHANGE_NAME_OF_OBJECT_OK = "Đã đổi ngày sinh thành công";
+    public static final String OBJECT_NOT_EXITS = "Đối tượng không tồn tại";
+    public static final String UNIVERSITY = "Đại học";
+    public static final String COLLEGES = "Cao đẳng";
     public static final String ENTER_AMOUNT_OBJECT = "Nhập số lượng đối tượng muốn thêm";
     public static final String ENTER_INDEX_OF_OBJECT = "Nhập vị trí đối tượng trong mảng bạn muốn thêm";
     public static final String EXIT = "Thoát chương trình";
@@ -26,8 +31,8 @@ public class Constant {
     public static final String DELETE_OBJECT_BY_INDEX = "3. Xóa đối tượng theo vị trí trong mảng";
     public static final String EDIT_BIRTH_DAY = "4. Chỉnh sửa ngày sinh đối tượng";
     public static final String SORT_BY_NAME_AND_SALARY = "5. Sắp xếp danh sách theo tên, và lương";
-    public static final String WRITE_FILE = "6. Ghi file";
-    public static final String READ_FILE = "7. Đọc file";
+    public static final String WRITE_FILE = "7. Ghi file";
+    public static final String READ_FILE = "8. Đọc file";
     public static final String EXIT_PROGRAM = "0. Thoát chương trình";
     public static final String ENTER_CHOICE = "Nhập lựa trọn choice";
 }

@@ -1,7 +1,7 @@
-package Storage;
+package storage;
 
-import Model.Person;
-import Model.Pharmacist;
+import model.Person;
+import model.Pharmacist;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
